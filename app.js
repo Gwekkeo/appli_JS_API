@@ -61,6 +61,7 @@ class ResultArea{
 		this.createList = this.createList.bind(this)
 		this.createImg = this.createImg.bind(this)
 		
+		this.code_base = this.code_base.bind(this)
 	}
 
 	showLoading(){
@@ -80,7 +81,7 @@ class ResultArea{
 		/*const rootArtist = this.root.querySelector("#js-result-area-main")
 		rootArtist.append(this.createElementArtist(data))*/
 
-		const infoArtist = this.root.querySelector(".js-result-area-main")
+		let infoArtist = this.root.querySelector(".js-result-area-main")
 		console.log("1")
 
 		try{
@@ -89,9 +90,19 @@ class ResultArea{
 		}
 		catch(error){
 			console.log("CATCH ERROR")
-			let racine = document.querySelector("#result-area")	
-			racine.append(code_base())
+			let racine = document.querySelector("#result-area")
+			racine.innerHTML = ""
+			const tabInfo = this.code_base()
+
+			tabInfo.forEach(function(elmt) {
+				racine.append(elmt)
+			})
+			infoArtist = document.querySelector(".js-result-area-main")
+			infoArtist.innerHTML = ""
+			console.log("INFO : ", infoArtist)
 		}
+		console.log("INFO : ", infoArtist)
+		console.log("2BIS")
 		infoArtist.append(this.createElementArtist(data))
 		console.log("3")
 
@@ -136,10 +147,19 @@ class ResultArea{
 	}
 
 	code_base(){
-		const base = '<div class="row mt-4"><div class="col-sm js-result-area-main"></div></div><div class="row mt-4 js-result-area-similar"></div>'
-		// let racine = document.createElement
+		let racine = document.createElement("div")
+		racine.className = "row mt-4"
 
+		let dos = document.createElement("div")
+		dos.className = "col-sm js-result-area-main"
 
+		racine.append(dos)
+
+		let similar = document.createElement("div")
+		similar.className = "row mt-4 js-result-area-similar"
+
+		console.log("code_base :)")
+		return [racine, similar]
 	}
 
 	createElementArtist(data){
