@@ -82,8 +82,16 @@ class ResultArea{
 
 		const infoArtist = this.root.querySelector(".js-result-area-main")
 		console.log("1")
-		infoArtist.innerHTML = ""
-		console.log("2")
+
+		try{
+			infoArtist.innerHTML = ""
+			console.log("2")
+		}
+		catch(error){
+			console.log("CATCH ERROR")
+			let racine = document.querySelector("#result-area")	
+			racine.append(code_base())
+		}
 		infoArtist.append(this.createElementArtist(data))
 		console.log("3")
 
@@ -127,6 +135,12 @@ class ResultArea{
 		//infoSimilaire.append(this.createElementSimilaire(data))
 	}
 
+	code_base(){
+		const base = '<div class="row mt-4"><div class="col-sm js-result-area-main"></div></div><div class="row mt-4 js-result-area-similar"></div>'
+		// let racine = document.createElement
+
+
+	}
 
 	createElementArtist(data){
 		const root = document.createElement("div")
