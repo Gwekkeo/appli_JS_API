@@ -1,6 +1,6 @@
 # README
 
-## Application Node utilisant du JS en front-end - 
+## Application Node, utilisation du JS en front-end pour les API - 
 - API LastFm 
 - API Wheater Map 
 - API Github
