@@ -2,11 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.render('index', {username: "Gwen"})
-})
-
-router.get('/test', (req, res) => {
-	res.render('test', {})
+	res.render('index', {tabAPI: ["LastFM", "Wheater_Map", "Github"]})
 })
 
 module.exports = router
