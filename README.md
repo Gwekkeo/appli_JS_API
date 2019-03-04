@@ -5,7 +5,7 @@
 - API Wheater Map 
 - API Github
 
-### 🥓 https:// 🥓
+### https://
 
 ## Les fonctionalités
 
