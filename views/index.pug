@@ -2,15 +2,15 @@ html
 	head
 		title=myTitle
 		link(rel="stylesheet" href="/style.css")
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
 	body
-		h1 MON TITRE
-		a(href="/test") GO TEST
-		
-		.username
-		if username != null
-			if username == ""
-				div Pas connecté !	
-			else
-				div #{username} est connecté!
-		else
-			div Pas connecté !
+		div(class="jumbotron" style='height: 95%;padding:10%;')
+			div(class="col-6 mx-auto")
+				h1 Allez sur l'Appli Web utilisant l'API : 
+				div(class="list-group center-block")
+					if tabAPI
+						each val in tabAPI
+							a(class="list-group-item d-flex justify-content-between align-items-center" href=val)= val
+					else
+						h1 :(
+
