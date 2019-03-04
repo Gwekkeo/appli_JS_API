@@ -1,0 +1,25 @@
+{
+  "name": "website_js_des_pages_api",
+  "version": "1.0.0",
+  "description": "Website avec plusieurs page, chaque page utilisant une API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gwekkeo/appli_JS_API_lastfm.git"
+  },
+  "author": "Gwendoline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gwekkeo/appli_JS_API_lastfm/issues"
+  },
+  "homepage": "https://github.com/Gwekkeo/appli_JS_API_lastfm#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "pug": "^2.0.3"
+  }
+}

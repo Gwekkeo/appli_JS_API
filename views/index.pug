@@ -1,0 +1,16 @@
+html
+	head
+		title=myTitle
+		link(rel="stylesheet" href="/style.css")
+	body
+		h1 MON TITRE
+		a(href="/test") GO TEST
+		
+		.username
+		if username != null
+			if username == ""
+				div Pas connecté !	
+			else
+				div #{username} est connecté!
+		else
+			div Pas connecté !
