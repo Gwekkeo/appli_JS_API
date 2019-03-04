@@ -215,8 +215,6 @@ class ResultArea{
 		return img
 	}
 }
-
-
 var cache = {};
 
 const affichage = new ResultArea(document.querySelector("#result-area"))
