@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		title API WHEATER
+		meta(charset='utf-8')
+		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+	body
+		.jumbotron
+			h1 WHEATER API
+			form#formulaire
+				.col-4.form-group
+					label(for='city') Ville :
+					input#city.form-control(type='text', placeholder='Entrer ville')
+					br
+					button.btn.btn-success(type='submit') Submit
+		#result
+		
+		script(type='text/javascript', src='app_api_WheaterMap.js')

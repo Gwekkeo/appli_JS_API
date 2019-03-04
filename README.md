@@ -23,7 +23,7 @@ $ npm install
 $ npm run watch
 ```
 
-❗️Les API : Wheater Map et Github n'ont pas encore été mise en production
+❗️L'API : Github n'a pas encore été mise en production
 
 ## Développeur
 

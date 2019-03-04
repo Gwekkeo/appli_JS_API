@@ -9,7 +9,7 @@ router.get('/LastFM', (req, res) => {
 })
 
 router.get('/Wheater_Map', (req, res) => {
-	res.render('', {})
+	res.render('wheaterMap')
 })
 
 router.get('/Github', (req, res) => {
