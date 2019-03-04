@@ -18,7 +18,7 @@ class SearchForm{
 
 		this.affichage.showLoading()
 		if(artiste in this.cache){
-			console.log("DEJA LAAAAA : ")
+			console.log("Recherche déjà effectué précédemment (donc utilisation du cache): ")
 			console.log(this.cache)
 			this.affichage.showData(this.cache[artiste])
 		}
@@ -30,7 +30,7 @@ class SearchForm{
 					}
 					this.cache[artiste] = data
 					this.affichage.showData(data)
-					console.log("pas deja chercher :) : ")
+					console.log("Recherche pas encore effectué :) : ")
 					console.log(this.cache)
 				})
 				.catch(err => this.affichage.showError(err))
@@ -82,14 +82,10 @@ class ResultArea{
 		rootArtist.append(this.createElementArtist(data))*/
 
 		let infoArtist = this.root.querySelector(".js-result-area-main")
-		console.log("1")
-
 		try{
 			infoArtist.innerHTML = ""
-			console.log("2")
 		}
 		catch(error){
-			console.log("CATCH ERROR")
 			let racine = document.querySelector("#result-area")
 			racine.innerHTML = ""
 			const tabInfo = this.code_base()
@@ -99,12 +95,8 @@ class ResultArea{
 			})
 			infoArtist = document.querySelector(".js-result-area-main")
 			infoArtist.innerHTML = ""
-			console.log("INFO : ", infoArtist)
 		}
-		console.log("INFO : ", infoArtist)
-		console.log("2BIS")
 		infoArtist.append(this.createElementArtist(data))
-		console.log("3")
 
 		const infoSimilaire = this.root.querySelector(".js-result-area-similar")
 		infoSimilaire.innerHTML = ""
@@ -158,7 +150,6 @@ class ResultArea{
 		let similar = document.createElement("div")
 		similar.className = "row mt-4 js-result-area-similar"
 
-		console.log("code_base :)")
 		return [racine, similar]
 	}
 
