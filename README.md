@@ -23,7 +23,8 @@ $ npm install
 $ npm run watch
 ```
 
-❗️
+❗️Utilisation du framework Express
+❗️Utilisation du moteur de template PUG
 
 ## Développeuse
 
