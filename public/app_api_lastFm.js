@@ -26,7 +26,7 @@ class SearchForm{
 			this.fetchData(artiste)
 				.then(data => {
 					if(data.error){
-						throw new Error(data.error)
+						this.affichage.showError(data.error)
 					}
 					this.cache[artiste] = data
 					this.affichage.showData(data)
@@ -70,7 +70,7 @@ class ResultArea{
 	}
 
 	showError(err){
-		this.root.innerHTML = "Error : " +err
+		this.root.innerHTML = "<h2>Artise not found</h2>"
 		let monBtn = document.querySelector('button[type=submit]')
 		monBtn.innerHTML = "Rechercher"
 	}
