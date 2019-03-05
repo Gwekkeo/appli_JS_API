@@ -23,9 +23,9 @@ $ npm install
 $ npm run watch
 ```
 
-❗️L'API : Github n'a pas encore été mise en production
+❗️
 
-## Développeur
+## Développeuse
 
 ➢ Gwendoline Cassand 👩‍💻
 

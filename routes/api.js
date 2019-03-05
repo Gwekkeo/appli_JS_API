@@ -13,7 +13,7 @@ router.get('/Wheater_Map', (req, res) => {
 })
 
 router.get('/Github', (req, res) => {
-	res.render('', {})
+	res.render('github')
 })
 
 module.exports = router
