@@ -28,5 +28,5 @@ $ npm run watch
 
 ## Développeuse
 
-➢ Gwendoline Cassand 👩‍💻
+➢ G.C 👩‍💻
 
